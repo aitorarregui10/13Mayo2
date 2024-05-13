@@ -1,0 +1,27 @@
+<h1>Listado de mascotas de Appnima</h1>
+<table>
+    <tr>
+        <th>Id de Mascota</th>
+        <th>Nombre</th>
+        <th>Id del Dueño</th>
+        <th>QR</th>
+        <th>Especie</th>
+        <th>Raza</th>
+        <th>Fecha de Nacimiento</th>
+    </tr>
+    @for (item of mascotas; track item.idMascota){
+    <tr>
+        <td>{{item.idMascota}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.idDueno}}</td>
+        <td>{{item.qr}}</td>
+        <td>{{item.especie}}</td>
+        <td>{{item.raza}}</td>
+        <td>{{item.fechaNacimiento}}</td>
+        <td><button type="button" [routerLink]="['actualizar',item.idMascota]">Modificar</button></td>
+        <td><button type="button" (click)="eliminar(item.idMascota)">Eliminar</button></td>
+    </tr>
+    }
+</table>
+<button routerLink="insertar">Alta de un nuevo producto</button>
+<router-outlet></router-outlet>

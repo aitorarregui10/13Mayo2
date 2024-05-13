@@ -1,0 +1,25 @@
+<div>
+    <form [formGroup]="form" #frmMascota=""ngForm" (ngSubmit)="operar()">
+        @if (edicion) {
+            <h2>Modifica</h2>
+            <label for="">Id de la Mascota</label>
+            <input placeholder="IdMascota" [readOnly]="true" requiered formControlName="idMascota">
+            <br><br>
+        }@else {
+            <h2>Registrar</h2>
+        }
+        <label for="">Nombre</label>
+        <input placeholder="Nombre" requiered formControlName="nombre">
+        <br><br>
+        <label for="">Id del Dueño</label>
+        <input placeholder="idDueno" requiered formControlName="idDueno">
+        <label for="">QR</label>
+        <input placeholder="QR" formControlName="qr">
+        <label for="">Especie</label>
+        <input placeholder="Especie" requiered formControlName="especie">
+        <label for="">Raza</label>
+        <input placeholder="Raza" formControlName="raza">
+        <label for="">Fecha de Nacimiento</label>
+        <input placeholder="FechaNacimiento" formControlName="fechaNacimiento">
+    </form>
+</div>>
