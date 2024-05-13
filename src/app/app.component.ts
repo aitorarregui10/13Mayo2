@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { InicioComponent } from './inicio/inicio.component';
+import { InsertarComponent } from './insertar/insertar.component';
 
 @Component({
   selector: 'app-root',
